@@ -4,22 +4,15 @@
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div v-for="(slide, index) in slides" :key="index" :class="{ 'carousel-item': true, 'active': index === 0 }">
-          <img :src="slide.image" class="d-block w-100" height="800" :alt="'Slide ' + (index + 1)">
+          <img :src="slide.image" class="d-block w-100
+          " height="800" :alt="'Slide ' + (index + 1)">
           <div class="carousel-caption d-flex  flex-column h-100 d-flex align-items-center justify-content-center text-center">
             <h5>First slide label</h5>
             <h3>{{ slide.caption }}</h3>
-            <button class="btn text-white rounded-0 mt-3">Order Now</button>
+            <button class="bn632-hover bn19 btn text-white rounded-0 mt-3">Order Now</button>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </div>
     <div class="container-fluid row d-flex justify-content-center align-items-center  gap-3 row-12 mt-5">
@@ -68,7 +61,7 @@
         <p> non ligula vitae libero malesuada fermentum. Phasellus non tempus augue. Duis sodales turpis ac aliquam varius. 
             Nullam pharetra ante tempor erat aliquet Integer et neque accumsan, consectetur urna in, commodo massa.
         </p>
-          <button class="btn rounded-0 text-white">Learn More</button>
+          <button class="btn rounded-0 text-white bn632-hover bn19">Learn More</button>
       </div>
     </div>
     <hr class="mt-5" />
@@ -182,8 +175,6 @@ export default {
         { content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, fugit nobis voluptas, eius perspiciatis laboriosam ipsa qui sequi saepe assumenda illum! Repellendus vitae aspernatur officia neque. Laboriosam recusandae et nesciunt!', image: 'src/assets/client1.jpeg', rating: 5, customer: "Prof. Lena" }
       ],
       slides: [
-        { image: 'src/assets/background8.jpeg', caption: 'There is no sincerer love than the love of food' },
-        { image: 'src/assets/background9.jpeg', caption: 'Good Food Good Health' },
         { image: 'src/assets/slider1.jpg', caption: 'You do not need a silver fork to eat good food.' },
         // Add more slides as needed
       ],
@@ -307,6 +298,47 @@ export default {
 .menu-card:hover {
   transform: scale(0.95); /* Zoom out slightly on hover */
   opacity: 1!important;
+}
+
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn19 {
+  background-image: linear-gradient(
+    to right,
+    #f5ce62,
+    #e43603,
+    #fa7199,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
 }
 
 </style>

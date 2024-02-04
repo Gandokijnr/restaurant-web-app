@@ -32,7 +32,7 @@
                     <div class="footer-widget">
                         <h3 class="footer-title">Follow Us</h3>
                     </div>
-                    <ol class="list-unstyled d-flex align-items-center">
+                    <ol class="list-unstyled d-flex align-items-center flex-wrap">
                         <li class="list-group-item d-flex justify-content-between align-items-start list-unstyled">
                             <div class="ms-2 me-auto">
                             <div class="fw-bold">Facebook</div>

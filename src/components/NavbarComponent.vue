@@ -1,6 +1,6 @@
 <template>
-  <header class="header-container position-sticky top-0 z-3 pt-3 bg-black py-2">
-    <div class="container  d-flex justify-content-between align-items-center">
+  <header class="header-container position-sticky top-0 z-3 pt-3 bg-black py-2 flex-wrap">
+    <div class="container  d-flex justify-content-between align-items-center flex-wrap">
         <div class="social-icons d-flex gap-3">
             <i class="bi bi-twitter-x text-white small"></i>
             <i class="bi bi-whatsapp text-white small"></i>
@@ -20,15 +20,26 @@
     </div>
     <hr class="text-light" />
     <div class="wrapper p-2">
-      <nav class="d-flex justify-content-around align-items-center position-sticky top-0 z-3">
+      <nav class="d-flex justify-content-around align-items-center position-sticky top-0 z-3 flex-wrap">
       <div class="nav-logo m-0 p-0">
         <router-link to="" class="text-decoration-none fs-3 text-white m-0">
           <img src="../assets/sitelogo.png" alt="" />
         </router-link>
       </div>
-      <div class="nav-content d-flex gap-5">
-        <router-link to="" class="text-decoration-none fs-6 text-white">Home</router-link>
-        <router-link to="" class="text-decoration-none fs-6 text-white">Page</router-link>
+      <div class="nav-content d-flex gap-5 align-items-center">
+        <router-link to="/" class="text-decoration-none fs-6 text-white">Home</router-link>
+        <router-link to="/FoodVendor" class="text-decoration-none fs-6 text-white">
+          <div class="dropdown" @mouseover="isOpen = true" @mouseleave="isOpen = false">
+          <button class="btn dropdown-toggle text-white">
+            Vendors
+          </button>
+          <div class="dropdown-menu bg-white p-3 rounded-0" :class="{ 'show': isOpen }" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </div>
+        </router-link>
         <router-link to="" class="text-decoration-none fs-6 text-white">Blog</router-link>
         <router-link to="" class="text-decoration-none fs-6 text-white">Contact</router-link>
       </div>
@@ -40,7 +51,12 @@
 
 <script>
     export default {
-        name: "Navbarcomponent"
+        name: "Navbarcomponent",
+        data (){
+          return{
+            isOpen: false
+          }
+        }
     }
 </script>
 
@@ -54,4 +70,14 @@
   small{
     font-size: 12px;
   }
+
+  .show{
+    width: 300px;
+    position: absolute;
+    z-index: 1000;
+    top: 170px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+
 </style>
