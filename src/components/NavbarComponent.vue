@@ -28,18 +28,7 @@
       </div>
       <div class="nav-content d-flex gap-5 align-items-center">
         <router-link to="/" class="text-decoration-none fs-6 text-white">Home</router-link>
-        <router-link to="/FoodVendor" class="text-decoration-none fs-6 text-white">
-          <div class="dropdown" @mouseover="isOpen = true" @mouseleave="isOpen = false">
-          <button class="btn dropdown-toggle text-white">
-            Vendors
-          </button>
-          <div class="dropdown-menu bg-white p-3 rounded-0" :class="{ 'show': isOpen }" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Link 1</a>
-            <a class="dropdown-item" href="#">Link 2</a>
-            <a class="dropdown-item" href="#">Link 3</a>
-          </div>
-        </div>
-        </router-link>
+        <router-link to="/FoodVendor" class="text-decoration-none fs-6 text-white">Vendors</router-link>
         <router-link to="" class="text-decoration-none fs-6 text-white">Blog</router-link>
         <router-link to="" class="text-decoration-none fs-6 text-white">Contact</router-link>
       </div>
@@ -69,15 +58,6 @@
 
   small{
     font-size: 12px;
-  }
-
-  .show{
-    width: 300px;
-    position: absolute;
-    z-index: 1000;
-    top: 170px;
-    left: 50%;
-    transform: translate(-50%, -100%);
   }
 
 </style>

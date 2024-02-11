@@ -4,12 +4,11 @@
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div v-for="(slide, index) in slides" :key="index" :class="{ 'carousel-item': true, 'active': index === 0 }">
-          <img :src="slide.image" class="d-block w-100
-          " height="800" :alt="'Slide ' + (index + 1)">
+          <img :src="slide.image" class="d-block w-100" :alt="'Slide ' + (index + 1)">
           <div class="carousel-caption d-flex  flex-column h-100 d-flex align-items-center justify-content-center text-center">
-            <h5>First slide label</h5>
-            <h3>{{ slide.caption }}</h3>
-            <button class="bn632-hover bn19 btn text-white rounded-0 mt-3">Order Now</button>
+            <h1>LET US MAKE YOUR FOOD</h1>
+            <h3 class="fs-2 text-capitalize mt-4">{{ slide.caption }}</h3>
+            <button class="bn632-hover bn19 btn text-white rounded-0 mt-4">Order Now</button>
           </div>
         </div>
       </div>
@@ -175,7 +174,7 @@ export default {
         { content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, fugit nobis voluptas, eius perspiciatis laboriosam ipsa qui sequi saepe assumenda illum! Repellendus vitae aspernatur officia neque. Laboriosam recusandae et nesciunt!', image: 'src/assets/client1.jpeg', rating: 5, customer: "Prof. Lena" }
       ],
       slides: [
-        { image: 'src/assets/slider1.jpg', caption: 'You do not need a silver fork to eat good food.' },
+        { image: 'src/assets/background19.png', caption: 'You do not need a silver fork to eat good food.' },
         // Add more slides as needed
       ],
       breakfast: {
@@ -183,7 +182,6 @@ export default {
         items: [
           { image: 'src/assets/breakfast1.jpg', caption: 'Pizza', price: '$45'},
           { image: 'src/assets/breakfast1.jpg', caption: 'Omelette', price: '$45' },
-          // Add more breakfast items as needed
         ]
       },
       lunch: {
@@ -191,7 +189,6 @@ export default {
         items: [
           { image: 'src/assets/background7.jpeg', caption: 'Salad', price: '$45' },
           { image: 'src/assets/background8.jpeg', caption: 'Sandwich', price: '$45' },
-          // Add more lunch items as needed
         ]
       },
       dinner: {
@@ -199,7 +196,6 @@ export default {
         items: [
           { image: 'src/assets/background9.jpeg', caption: 'Pasta', price: '$45' },
           { image: 'src/assets/slider4.jpg', caption: 'Steak', price: '$45' },
-          // Add more dinner items as needed
         ]
       },
     };
@@ -246,14 +242,6 @@ export default {
 </script>
 
 <style scoped>
-/* Your component-specific styles if needed */
-.main {
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
-
 .cursor-pointer{
   cursor: pointer;
 }
